@@ -1,0 +1,21 @@
+# ── This repo is PUBLIC ───────────────────────────────────────────────
+# It lives inside a private Obsidian vault. Only files that belong on
+# the public site may be committed here.
+#
+# Planning notes for this project live OUTSIDE the repo, at
+#   ../projects/portfolio-site.md
+# ──────────────────────────────────────────────────────────────────────
+
+# Notes and vault files — never publish
+*.md
+!README.md
+.obsidian/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# macOS
+.DS_Store

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liandra Doonan</title>
+<meta name="description" content="Liandra Doonan — talent partner, Irish dancer, dog (and cat) mom.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-0:      #05050a;
+    --bg-1:      #0b0b14;
+    --text:      #f4f3f8;
+    --muted:     #9b98ab;
+    --faint:     #605d72;
+    --rule:      rgba(255,255,255,0.09);
+    --grad-a:    #7c5cff;
+    --grad-b:    #ff6fae;
+    --grad-c:    #47d1ff;
+    --pill-bg:   rgba(255,255,255,0.06);
+    --pill-rule: rgba(255,255,255,0.12);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(60rem 40rem at 15% -10%, rgba(124,92,255,0.30), transparent 60%),
+      radial-gradient(50rem 36rem at 110% 10%, rgba(255,111,174,0.20), transparent 55%),
+      radial-gradient(60rem 50rem at 50% 120%, rgba(71,209,255,0.14), transparent 60%),
+      var(--bg-0);
+    color: var(--text);
+    font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 8vw, 4rem) clamp(1.35rem, 6vw, 2.5rem);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-rule);
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+  }
+
+  .eyebrow .dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+    flex: none;
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.4rem, 8vw, 3.6rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  .headline {
+    margin: 0 0 1.75rem;
+    font-size: clamp(1.2rem, 3.6vw, 1.55rem);
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    background: linear-gradient(100deg, var(--grad-a) 0%, var(--grad-b) 55%, var(--grad-c) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bio {
+    margin: 0 0 2.25rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 34rem;
+  }
+
+  .bio strong { color: var(--text); font-weight: 600; }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text);
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-rule);
+    padding: 0.45rem 0.95rem;
+    border-radius: 999px;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.6rem;
+    font-size: 0.98rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15rem;
+    height: 1px;
+    background: linear-gradient(90deg, var(--grad-a), var(--grad-b));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  a:hover::after { transform: scaleX(1); }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-0:      #fafafc;
+      --bg-1:      #ffffff;
+      --text:      #14131c;
+      --muted:     #55536a;
+      --faint:     #8b899c;
+      --rule:      rgba(20,19,28,0.09);
+      --pill-bg:   rgba(20,19,28,0.045);
+      --pill-rule: rgba(20,19,28,0.1);
+    }
+    body {
+      background:
+        radial-gradient(60rem 40rem at 15% -10%, rgba(124,92,255,0.14), transparent 60%),
+        radial-gradient(50rem 36rem at 110% 10%, rgba(255,111,174,0.12), transparent 55%),
+        radial-gradient(60rem 50rem at 50% 120%, rgba(71,209,255,0.10), transparent 60%),
+        var(--bg-0);
+    }
+    a { color: var(--text); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="eyebrow"><span class="dot"></span>Montreal, Canada</span>
+
+  <h1>Liandra Doonan</h1>
+
+  <p class="headline">Talent partner by day. Irish dancer and dog (and cat) mom every other hour.</p>
+
+  <p class="bio">
+    I'm a <strong>Senior Talent Partner</strong> building the people and talent function inside
+    high-growth startups, with an emphasis on <strong>Series B</strong>. I like to experiment
+    and build — testing new tools and systems rather than running recruiting the same way twice.
+  </p>
+
+  <p class="bio">
+    Off the clock, I'm jumping back into <strong>Irish dance</strong> — the love never died
+    after close to <strong>20 years</strong> of a competitive career. I'm also dog obsessed,
+    currently training my two dogs not to eat my partner's two cats in our newly blended family.
+  </p>
+
+  <div class="tags">
+    <span class="tag">Talent &amp; Recruiting</span>
+    <span class="tag">Series A–B Startups</span>
+    <span class="tag">Irish Dance</span>
+    <span class="tag">Dog Training</span>
+  </div>
+
+  <div class="contact-links">
+    <a href="mailto:liandradoonan@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/liandra-doonan/">LinkedIn</a>
+    <a href="resume.html">Full résumé →</a>
+  </div>
+
+</div>
+</body>
+</html>

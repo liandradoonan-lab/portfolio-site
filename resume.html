@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liandra Doonan — Senior Talent Partner</title>
+<meta name="description" content="Senior recruiter and talent partner with 5+ years scaling high-growth Series B startups. ~100 hires, sole-operator talent function, AI-built sourcing systems.">
+
+<style>
+  :root {
+    --bg:        #fbfaf8;
+    --surface:   #ffffff;
+    --text:      #1a1a18;
+    --muted:     #6b6862;
+    --faint:     #a8a49c;
+    --rule:      #e6e2da;
+    --accent:    #9a4b2e;
+    --max:       46rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:      #15140f;
+      --surface: #1d1c17;
+      --text:    #ece9e2;
+      --muted:   #a09c92;
+      --faint:   #6f6b62;
+      --rule:    #302e27;
+      --accent:  #d98b64;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: clamp(3rem, 9vw, 6.5rem) clamp(1.35rem, 5vw, 2.5rem) 4rem;
+  }
+
+  /* ---------- masthead ---------- */
+
+  header { margin-bottom: clamp(3rem, 7vw, 4.5rem); }
+
+  h1 {
+    font-size: clamp(2.15rem, 7vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.022em;
+    font-weight: 600;
+    margin: 0 0 0.85rem;
+  }
+
+  .role {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.815rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1.9rem;
+  }
+
+  .lede {
+    font-size: clamp(1.14rem, 2.6vw, 1.3rem);
+    line-height: 1.55;
+    margin: 0;
+    color: var(--text);
+  }
+
+  .lede strong { font-weight: 600; }
+
+  /* ---------- sections ---------- */
+
+  section { margin-bottom: clamp(2.75rem, 6vw, 4rem); }
+
+  h2 {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 0 0 1.15rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ---------- strengths ---------- */
+
+  .strengths { display: grid; gap: 1.75rem; }
+
+  .strength h3 {
+    font-size: 1.075rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4rem;
+  }
+
+  .strength p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  /* ---------- experience ---------- */
+
+  .job {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 0 1.75rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .job:last-of-type { border-bottom: 0; padding-bottom: 0; }
+  .job:first-of-type { padding-top: 0; }
+
+  .when {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--faint);
+    padding-top: 0.3rem;
+    letter-spacing: 0.01em;
+  }
+
+  .job h3 {
+    font-size: 1.075rem;
+    font-weight: 600;
+    margin: 0 0 0.1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .company {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 0 0 0.6rem;
+  }
+
+  .job ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.985rem;
+    color: var(--muted);
+  }
+
+  .job li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .job li:last-child { margin-bottom: 0; }
+
+  .job li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--faint);
+  }
+
+  /* ---------- looking for ---------- */
+
+  .seeking {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: clamp(1.35rem, 4vw, 1.85rem);
+  }
+
+  .seeking ul {
+    margin: 0 0 1.15rem;
+    padding-left: 1.15rem;
+    color: var(--muted);
+  }
+
+  .seeking li { margin-bottom: 0.4rem; }
+  .seeking p:last-child { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+  /* ---------- toolkit ---------- */
+
+  .toolkit {
+    font-size: 0.97rem;
+    color: var(--muted);
+  }
+
+  .toolkit dt {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 0.3rem;
+  }
+
+  .toolkit dd { margin: 0 0 1.05rem; }
+  .toolkit dd:last-child { margin-bottom: 0; }
+
+  /* ---------- contact ---------- */
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.6rem;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--text); }
+
+  footer {
+    margin-top: clamp(3rem, 8vw, 5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.78rem;
+    color: var(--faint);
+  }
+
+  @media (max-width: 34rem) {
+    .job { grid-template-columns: 1fr; gap: 0; }
+    .when { padding-top: 0; margin-bottom: 0.45rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Liandra Doonan</h1>
+    <p class="role">Senior Recruiter &amp; Talent Partner</p>
+    <p class="lede">
+      I've spent five years as the talent function inside high-growth startups —
+      <strong>roughly 100 hires</strong> at a 70-person Series B company, as the sole recruiter
+      reporting straight to the co-founders. Full-cycle hiring, and the people operations
+      around it, owned end to end.
+    </p>
+  </header>
+
+  <section>
+    <h2>What I bring</h2>
+    <div class="strengths">
+
+      <div class="strength">
+        <h3>Sole-operator scale</h3>
+        <p>
+          At Planned I <em>was</em> the talent function: ~100 hires across product, engineering,
+          GTM, finance and operations, for a 70-person team, in Montreal and globally across
+          LATAM, APAC and EMEA. That's the shape of a first-talent-hire role, already done once.
+        </p>
+      </div>
+
+      <div class="strength">
+        <h3>AI inside the workflow</h3>
+        <p>
+          I built a multi-channel outbound sourcing engine on Heyreach and Claude Code, running
+          campaigns across several concurrent roles. It's a working system I built and use daily,
+          not a line on a résumé — and I keep extending it.
+        </p>
+      </div>
+
+      <div class="strength">
+        <h3>High-volume and global range</h3>
+        <p>
+          150 warehouse and logistics hires across Canada and the US at RenoRun, in a
+          high-velocity environment, with reporting dashboards I built to track passthrough,
+          no-show rates and time-to-fill.
+        </p>
+      </div>
+
+      <div class="strength">
+        <h3>A real partner to founders</h3>
+        <p>
+          Scoping roles, shaping interview plans, and saying so plainly when a brief and the
+          market don't line up. Scaling teams quickly without trading away talent quality or
+          candidate experience.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="when">Sep 2022 — 2026</div>
+      <div>
+        <h3>Lead Talent Partner</h3>
+        <p class="company">Planned — Series B, AI-powered meeting &amp; events platform</p>
+        <ul>
+          <li>Sole recruiter for most of my tenure, reporting directly to the co-founders</li>
+          <li>~100 hires across every department and seniority, for a 70-person team</li>
+          <li>Owned onboarding, employee relations and office management alongside hiring</li>
+          <li>Built an AI-powered outbound sourcing engine with Heyreach and Claude Code</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Aug 2021 — Aug 2022</div>
+      <div>
+        <h3>Recruiter, Operations</h3>
+        <p class="company">RenoRun — Series B, construction materials delivery</p>
+        <ul>
+          <li>150 warehouse and logistics hires across Canadian and US sites</li>
+          <li>Built recruitment dashboards tracking passthrough, no-show, rejection reasons, time-to-fill</li>
+          <li>Culture Ambassador — values-based interviewing and engagement-survey initiatives</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Apr 2020 — Aug 2021</div>
+      <div>
+        <h3>Client Retention Specialist, then interim Team Lead</h3>
+        <p class="company">Goodfood</p>
+        <ul>
+          <li>Top performer across all KPIs — ~30% retention against a 21.5% target</li>
+          <li>Led a team of six: coaching, feedback and performance reviews</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Feb 2018 — Dec 2019</div>
+      <div>
+        <h3>Inbound Sales Representative</h3>
+        <p class="company">Bus.com — Series B, group transportation marketplace</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>What I'm looking for</h2>
+    <div class="seeking">
+      <ul>
+        <li>Senior recruiter or talent partner at a <strong>Series A–B startup</strong></li>
+        <li><strong>First talent or HR hire</strong> at a pre-seed, seed or Series A company — happy to build the function from scratch</li>
+        <li>SaaS and tech startups, the space I know best</li>
+      </ul>
+      <p>
+        Based in Montreal. Open to remote roles with companies able to hire Canadian residents,
+        or hybrid in Montreal or Vancouver.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Toolkit</h2>
+    <dl class="toolkit">
+      <dt>ATS &amp; CRM</dt>
+      <dd>Ashby, Greenhouse, Lever, Gem, HubSpot, Salesforce</dd>
+
+      <dt>AI &amp; sourcing</dt>
+      <dd>Claude, Claude Code, Heyreach, Pin, Juicebox, Lovable</dd>
+
+      <dt>Education &amp; languages</dt>
+      <dd>BSc Physiology, McGill University · English, French (professional)</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Get in touch</h2>
+    <div class="contact-links">
+      <a href="mailto:liandradoonan@gmail.com">liandradoonan@gmail.com</a>
+      <a href="https://www.linkedin.com/in/liandra-doonan/">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    Built with Claude Code. Source on GitHub.
+  </footer>
+
+</div>
+</body>
+</html>
