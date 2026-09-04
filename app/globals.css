@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* Nav is sticky; keep in-page anchors clear of it. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-ink text-beige font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    /* Fraunces' display cut: high optical size, low softness, no wonk. */
+    font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  }
+
+  ::selection {
+    @apply bg-air text-beige;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-air ring-offset-2 ring-offset-ink;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
