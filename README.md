@@ -13,9 +13,9 @@ Five colours, no others. Defined in `tailwind.config.ts`.
 
 | Token | Hex | Role |
 | --- | --- | --- |
-| `ink` | `#01161E` | Page background |
+| `ink` | `#000000` | Page background |
 | `teal` | `#124559` | Surface — active nav pill, cards, rows |
-| `air` | `#598392` | Accent — links, buttons, active nav |
+| `air` | `#598392` | Accent — links, buttons, hover |
 | `beige` | `#EFF6E0` | Primary text |
 | `ash` | `#AEC3B0` | Muted text, borders, dividers |
 
@@ -52,6 +52,11 @@ page scrolls, at which point the wordmark shrinks (36px → 20px) so a masthead 
 size doesn't follow you down the page. The active link is a teal pill with beige
 text, moved between links with a Framer `layoutId` on the shared spring — beige on
 teal is 9.37:1, where the original air-on-teal was 2.52:1.
+
+Note that air only became safe for normal-size text when the background went to
+black: it measures 4.48:1 on the old `#01161E` (below the 4.5:1 AA floor) and
+5.09:1 on `#000000`. If the background is ever lightened again, re-check air
+before using it for body copy.
 
 ## Headings
 
