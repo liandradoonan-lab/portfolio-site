@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       // The five locked tokens. Nothing else gets a colour name.
       colors: {
-        ink: "#01161E",    // page background
+        ink: "#000000",    // page background
         teal: "#124559",   // surface — cards, nav, rows
         air: "#598392",    // accent — links, buttons, active nav
         beige: "#EFF6E0",  // primary text
