@@ -9,9 +9,8 @@ import { expandSpring } from "@/lib/motion";
 // Home is deliberately absent — the wordmark above is the link back.
 const links = [
   { href: "/experience", label: "Experience" },
-  { href: "/building", label: "Building" },
-  { href: "/wip", label: "WIP" },
-  { href: "/hobbies", label: "Hobbies" },
+  { href: "/recruitment", label: "Recruitment" },
+  { href: "/personal", label: "Personal" },
 ] as const;
 
 /** True once the page has scrolled off the very top. */
