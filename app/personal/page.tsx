@@ -80,8 +80,8 @@ export default async function PersonalPage() {
         <PhotoGrid photos={dancePhotos} placeholderCount={3} />
       </section>
 
-      <section className="mt-16 grid items-start gap-10 sm:grid-cols-[1.15fr_1fr] sm:gap-12">
-        <div>
+      <section className="mt-16 grid items-start gap-10 sm:grid-cols-[1fr_1.15fr] sm:gap-12">
+        <div className="sm:order-2">
           <h2 className="font-display text-2xl text-beige sm:text-3xl">Dogs</h2>
           <p className="mt-4 leading-relaxed text-ash">
             Finn and Oliver — a husky and an Australian shepherd — and an
@@ -91,14 +91,9 @@ export default async function PersonalPage() {
           </p>
         </div>
 
-        <PhotoGrid photos={dogPhotos} placeholderCount={3} />
-      </section>
-
-      <section className="mt-16">
-        <h2 className="font-display text-2xl text-beige sm:text-3xl">Italian</h2>
-        <p className="mt-4 max-w-xl leading-relaxed text-ash">
-          Working through a book at about a chapter a week.
-        </p>
+        <div className="sm:order-1">
+          <PhotoGrid photos={dogPhotos} placeholderCount={3} />
+        </div>
       </section>
 
       <section className="mt-16">
@@ -182,6 +177,13 @@ export default async function PersonalPage() {
         <div className="mt-4">
           <BookShelf books={read} takeaways={takeaways} />
         </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="font-display text-2xl text-beige sm:text-3xl">Learning Italian</h2>
+        <p className="mt-4 max-w-xl leading-relaxed text-ash">
+          Working through a book at about a chapter a week.
+        </p>
       </section>
     </>
   );
