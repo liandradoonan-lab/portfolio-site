@@ -83,12 +83,31 @@ export default async function PersonalPage() {
       <section className="mt-16 grid items-start gap-10 sm:grid-cols-[1fr_1.15fr] sm:gap-12">
         <div className="sm:order-2">
           <h2 className="font-display text-2xl text-beige sm:text-3xl">Dogs</h2>
-          <p className="mt-4 leading-relaxed text-ash">
-            Finn and Oliver — a husky and an Australian shepherd — and an
-            ongoing project teaching them to live peacefully alongside Opal and
-            Onyx, my partner&rsquo;s two cats, now that the households have
-            merged.
-          </p>
+          <div className="mt-4 space-y-4 leading-relaxed text-ash">
+            <p>
+              I&rsquo;ve been a dog lover since my childhood, obsessed with our
+              family black labs and all of the dogs I would pass on the street.
+              I knew that I&rsquo;d go on to be a crazy dog mom myself &mdash;
+              and that started with Finn, my husky mix, who I got right out of
+              university. He came with a good few behavioural challenges and so
+              began my journey in dog behaviour and communication &mdash;
+              learning what my dog needed to be happy and &ldquo;well-trained&rdquo;
+              and taking that to every other dog interaction I&rsquo;ve had
+              since, from sitting and training my friend&rsquo;s dogs, to
+              adopting my reactive Australian Shepherd. I occasionally take that
+              love to other dogs &mdash; I&rsquo;m on Rover!
+            </p>
+            <p>
+              My newest challenge has been training our prey-driven dogs and our
+              two cats to live in the same home, peacefully. So far, no one has
+              been scratched, bitten, or eaten. It&rsquo;s a very slow process
+              but here are some progress photos!
+            </p>
+            <p>
+              My lifelong dream is to own a farm to rescue and rehabilitate
+              dogs, and give them a lovely place to roam!
+            </p>
+          </div>
         </div>
 
         <div className="sm:order-1">
