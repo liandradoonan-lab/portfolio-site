@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "verify": "NEXT_DIST_DIR=.next-verify next build"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",

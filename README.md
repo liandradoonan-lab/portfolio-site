@@ -3,9 +3,16 @@
 Next.js 14 (App Router) · TypeScript · Tailwind · Framer Motion.
 
 ```bash
-npm run dev    # http://localhost:3000
-npm run build
+npm run dev     # http://localhost:3000
+npm run verify  # production build, safe to run while dev is up
+npm run build   # production build (what Vercel runs)
 ```
+
+`next dev` and `next build` both write to `.next`, so running a build while the
+dev server is up wipes what it's serving and the site renders with no CSS —
+Times, purple links, white background. `npm run verify` is the same build
+pointed at `.next-verify` instead, so it can't touch the running server. Use it
+for local checks; leave `npm run build` for deploys.
 
 ## Design tokens
 
