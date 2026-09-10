@@ -19,13 +19,60 @@ const takeaways: Record<string, string> = {};
 // repo — it's gitignored). Edit there, then sync.
 // Photos: drop files in public/photos/dance/ and list them here with alt text.
 // Empty array renders the slot as placeholders.
-const dancePhotos: Photo[] = [];
-const dogPhotos: Photo[] = [];
+const dancePhotos: Photo[] = [
+  {
+    // Cropped to Liandra — the original shows other competitors and presenters.
+    src: "/photos/dance/medal.jpg",
+    alt: "Liandra smiling on stage in a tiara and a black and white diamond-patterned Irish dance costume, being presented with a medal on a green, white and orange ribbon",
+  },
+  {
+    src: "/photos/dance/trophy.jpg",
+    alt: "Liandra smiling on stage in a teal sequinned Irish dance costume and a championship sash, hugging a large trophy",
+  },
+];
+// Paired by trick, then both dogs together as the wide last tile.
+const dogPhotos: Photo[] = [
+  {
+    src: "/photos/dogs/finn-nose-treat.jpg",
+    alt: "Finn, a grey and white husky mix, sitting still with a treat balanced on his nose",
+  },
+  {
+    src: "/photos/dogs/oliver-head-treat.jpg",
+    alt: "Oliver, a brown and white Australian Shepherd, looking up at the camera with a treat balanced on his head",
+  },
+  {
+    src: "/photos/dogs/finn-paw.jpg",
+    alt: "Finn sitting on a rug with one paw raised, head tilted towards the camera",
+  },
+  {
+    src: "/photos/dogs/oliver-spoon.jpg",
+    alt: "Oliver sitting in front of a sofa holding a wooden spoon in his mouth",
+  },
+  {
+    src: "/photos/dogs/finn-and-oliver.jpg",
+    alt: "Oliver and Finn sitting side by side in an office, looking up at the camera",
+    // Wide tile: nudge the crop up so Finn keeps his ears.
+    position: "center 40%",
+  },
+];
 
-const STRAVA_PROFILE = "https://www.strava.com/athletes/36152088";
+const italianPhotos: Photo[] = [
+  {
+    src: "/photos/italian/short-stories-in-italian.jpg",
+    alt: "A hand holding up a copy of Short Stories in Italian by Olly Richards, volume one, for beginners, in front of a sunny window",
+  },
+  {
+    src: "/photos/italian/seafood-pasta.jpg",
+    alt: "Taking a big forkful of pasta with clams and mussels at a restaurant, glass of white wine on the tiled table",
+  },
+];
+
+const STRAVA_PROFILE ="https://www.strava.com/athletes/36152088";
+const RUNNA_URL = "https://www.runna.com/";
 const RACE_URL = "https://couronsmtl.com/en/courses/marathon/10km/";
-// Drop the organiser's logo in public/photos/race/ and set the path here.
-const RACE_LOGO: string | null = null;
+// The organiser's logo, from their site header (white on transparent, so it
+// only reads on a dark ground). Set to null to show the placeholder instead.
+const RACE_LOGO: string | null = "/photos/race/marathon-beneva-montreal.png";
 
 const achievements = [
   "Two-time Eastern Canadian Champion",
@@ -82,7 +129,9 @@ export default async function PersonalPage() {
 
       <section className="mt-16 grid items-start gap-10 sm:grid-cols-[1fr_1.15fr] sm:gap-12">
         <div className="sm:order-2">
-          <h2 className="font-display text-2xl text-beige sm:text-3xl">Dogs</h2>
+          <h2 className="font-display text-2xl text-beige sm:text-3xl">
+            Dog (and cat?) training! 🐕
+          </h2>
           <div className="mt-4 space-y-4 leading-relaxed text-ash">
             <p>
               I&rsquo;ve been a dog lover since my childhood, obsessed with our
@@ -101,7 +150,7 @@ export default async function PersonalPage() {
               My newest challenge has been training our prey-driven dogs and our
               two cats to live in the same home, peacefully. So far, no one has
               been scratched, bitten, or eaten. It&rsquo;s a very slow process
-              but here are some progress photos!
+              but lots of fun!
             </p>
             <p>
               My lifelong dream is to own a farm to rescue and rehabilitate
@@ -116,11 +165,29 @@ export default async function PersonalPage() {
       </section>
 
       <section className="mt-16">
-        <h2 className="font-display text-2xl text-beige sm:text-3xl">Running</h2>
-        <p className="mt-4 max-w-xl leading-relaxed text-ash">
-          Getting back into running, with Runna as my training plan. HYROX keeps
-          turning up in my algorithm, which may or may not be a sign.
-        </p>
+        <h2 className="font-display text-2xl text-beige sm:text-3xl">
+          Running &mdash; road to 10k!
+        </h2>
+        <div className="mt-4 max-w-xl space-y-4 leading-relaxed text-ash">
+          <p>
+            Getting back into running and training for my first ever 10k in
+            October. Please send good vibes to my ex-dancer knees. I&rsquo;ve
+            been using{" "}
+            <a
+              href={RUNNA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-air underline underline-offset-4 decoration-air/40 hover:decoration-air"
+            >
+              Runna
+            </a>{" "}
+            for guided training.
+          </p>
+          <p>
+            Should I try HYROX next? According to my Instagram algorithm, maybe I
+            should&hellip;
+          </p>
+        </div>
 
         {/* The race she's training for. Links out to the organiser. */}
         <a
@@ -132,9 +199,10 @@ export default async function PersonalPage() {
           {RACE_LOGO ? (
             <Image
               src={RACE_LOGO}
-              alt="Marathon Beneva de Montréal"
-              width={200}
-              height={80}
+              // Decorative: the race name is the link text right beside it.
+              alt=""
+              width={273}
+              height={86}
               className="h-12 w-auto shrink-0 rounded"
             />
           ) : (
@@ -147,13 +215,13 @@ export default async function PersonalPage() {
               10K &mdash; Marathon Beneva de Montréal
             </span>
             <span className="mt-0.5 block text-[13px] text-ash">
-              10 October 2026 &middot; my first race back
+              10 October 2026 &middot; my first 10k!
             </span>
           </span>
         </a>
 
         <p className="mt-4 text-[13px] text-ash">
-          Follow along on{" "}
+          Follow me on{" "}
           <a
             href={STRAVA_PROFILE}
             target="_blank"
@@ -182,6 +250,10 @@ export default async function PersonalPage() {
           </a>
           !
         </p>
+        <p className="mt-4 max-w-xl leading-relaxed text-ash">
+          My go-to genres are sci-fi and fantasy, historical fiction, Greek myth,
+          and any non-fiction about product, tech, startups and talent.
+        </p>
 
         <h3 className="mt-8 text-sm uppercase tracking-[0.14em] text-air">
           Currently reading
@@ -198,11 +270,26 @@ export default async function PersonalPage() {
         </div>
       </section>
 
-      <section className="mt-16">
-        <h2 className="font-display text-2xl text-beige sm:text-3xl">Learning Italian</h2>
+      {/* Mirrored like Dogs: photos left, text right on desktop. Text stays
+          first in the markup so mobile and screen readers get it first. */}
+      <section className="mt-16 grid items-start gap-10 sm:grid-cols-[1fr_1.15fr] sm:gap-12">
+        <div className="sm:order-2">
+        <h2 className="font-display text-2xl text-beige sm:text-3xl">
+          Learning Italian 🇮🇹
+        </h2>
         <p className="mt-4 max-w-xl leading-relaxed text-ash">
-          Working through a book at about a chapter a week.
+          When choosing vacation destinations with my Italian partner, I find
+          myself saying &ldquo;Let&rsquo;s go to Italy&rdquo; every single time
+          &mdash; there are too many new places to see! It&rsquo;s time to learn
+          the language so I can live my dream of sounding like a local and
+          expand my vocab outside of &ldquo;ciao&rdquo;, &ldquo;buona
+          sera&rdquo; and &ldquo;spaghetti alle vongole per favore&rdquo; 🤪
         </p>
+        </div>
+
+        <div className="sm:order-1">
+          <PhotoGrid photos={italianPhotos} placeholderCount={2} />
+        </div>
       </section>
     </>
   );
