@@ -14,6 +14,12 @@ Times, purple links, white background. `npm run verify` is the same build
 pointed at `.next-verify` instead, so it can't touch the running server. Use it
 for local checks; leave `npm run build` for deploys.
 
+The two builds also type-check separately: `tsconfig.json` covers `.next/types`
+and `tsconfig.verify.json` covers `.next-verify/types`. If either read the
+other's generated types, deleting a page while the dev server is running
+would leave a stale type file behind and fail the build over a page that no
+longer exists.
+
 ## Design tokens
 
 Five colours, no others. Defined in `tailwind.config.ts`.
