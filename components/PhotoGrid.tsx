@@ -6,6 +6,9 @@ export type Photo = {
   /** What's in the picture. Shown if the image fails, read aloud by screen
       readers, and indexed — so write it for a person, not for search. */
   alt: string;
+  /** Focal point when the tile crops the photo, as CSS object-position
+      (e.g. "center 40%"). Defaults to the centre. */
+  position?: string;
 };
 
 /**
@@ -63,6 +66,14 @@ export default function PhotoGrid({
             alt={photo.alt}
             width={800}
             height={1000}
+            // Tiles are half the collage, the spanning tile all of it; the
+            // collage is roughly half the content column on desktop.
+            sizes={
+              i === spanIndex
+                ? "(min-width: 640px) 520px, 100vw"
+                : "(min-width: 640px) 260px, 50vw"
+            }
+            style={photo.position ? { objectPosition: photo.position } : undefined}
             className="h-full w-full object-cover"
           />
         </div>
