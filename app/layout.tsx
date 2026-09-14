@@ -14,12 +14,26 @@ const fraunces = Fraunces({
   axes: ["opsz", "SOFT", "WONK"],
 });
 
+// The site's public address. Link previews need absolute image URLs, and
+// Next builds them from this. Change it here if the domain changes.
+const SITE_URL = "https://liandradoonan.com";
+
+// The preview image itself is app/opengraph-image.jpg (+ .alt.txt), which
+// Next picks up by filename; the favicon is app/icon.svg.
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Liandra Doonan",
     template: "%s · Liandra Doonan",
   },
-  description: "Portfolio of Liandra Doonan.",
+  description:
+    "Senior full-stack recruiter, people ops generalist, and crazy dog mom",
+  openGraph: {
+    type: "website",
+    siteName: "Liandra Doonan",
+    locale: "en_CA",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

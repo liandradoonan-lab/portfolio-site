@@ -80,7 +80,8 @@ export default function ExperienceRow({
         {/* Side by side on desktop; stacked on mobile, where "Planned —
             Lead Talent Partner" and the dates can't share a 327px line
             without both wrapping. */}
-        <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+        {/* Spans only: a button may hold phrasing content, not <div>/<p>. */}
+        <span className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
           <span className="text-base text-beige">
             {role.company}
             <span className="text-ash"> — {role.title}</span>
@@ -88,8 +89,10 @@ export default function ExperienceRow({
           <span className="shrink-0 text-sm tabular-nums text-ash">
             {role.dates}
           </span>
-        </div>
-        <p className="mt-0.5 text-[13px] leading-snug text-ash">{role.line}</p>
+        </span>
+        <span className="mt-0.5 block text-[13px] leading-snug text-ash">
+          {role.line}
+        </span>
       </button>
 
       <AnimatePresence initial={false}>
@@ -97,6 +100,7 @@ export default function ExperienceRow({
           <motion.div
             key="panel"
             id={panelId}
+            role="region"
             aria-labelledby={buttonId}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
