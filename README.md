@@ -73,10 +73,10 @@ before using it for body copy.
 
 ## Headings
 
-The home hero is two columns on desktop (text left, photo right), stacked on
-mobile, top-aligned and sitting high on the page. The photo slot in
-`app/page.tsx` is a placeholder — the comment above it has the exact
-`next/image` block to paste in once there's a file in `public/`.
+The home hero is three columns on desktop: two tilted photos either side of the
+name (`components/HeroPhotoColumn.tsx`). On mobile the name comes first and the
+photos follow two by two — CSS `order` does the swap, so the markup stays in
+desktop order.
 
 Every heading on the site, home included, is Fraunces' display cut. The home
 title briefly ran through Switzer 800, Clash Display 700 and Switzer 500 before

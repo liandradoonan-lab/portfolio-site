@@ -15,10 +15,10 @@ const GOODREADS_PROFILE =
 // hand here (source of truth: projects/portfolio-copy.md in the vault).
 const takeaways: Record<string, string> = {};
 
-// Copy source of truth: projects/portfolio-copy.md in the vault (not in this
-// repo — it's gitignored). Edit there, then sync.
-// Photos: drop files in public/photos/dance/ and list them here with alt text.
-// Empty array renders the slot as placeholders.
+// Copy source of truth: projects/portfolio-copy.md in the vault, outside this
+// repo. Edit there, then sync.
+// Photos live in public/photos/<section>/, listed here with alt text. An
+// empty array renders the slot as placeholders.
 const dancePhotos: Photo[] = [
   {
     // Cropped to Liandra — the original shows other competitors and presenters.
@@ -97,31 +97,31 @@ export default async function PersonalPage() {
 
       <section className="mt-16 grid items-start gap-10 sm:grid-cols-[1.15fr_1fr] sm:gap-12">
         <div>
-        <h2 className="font-display text-2xl text-beige sm:text-3xl">
-          Irish dance
-        </h2>
+          <h2 className="font-display text-2xl text-beige sm:text-3xl">
+            Irish dance
+          </h2>
 
-        <p className="mt-4 leading-relaxed text-ash">
-          I started dancing when I was 5 years old and continued to get more
-          competitive as I got older, attending minor and major competitions
-          across Canada, the US and Ireland, qualifying for the World
-          Championships five times. I moved on to coach dance after my
-          competitive retirement, and now do it just for fun!
-        </p>
+          <p className="mt-4 leading-relaxed text-ash">
+            I started dancing when I was 5 years old and continued to get more
+            competitive as I got older, attending minor and major competitions
+            across Canada, the US and Ireland, qualifying for the World
+            Championships five times. I moved on to coach dance after my
+            competitive retirement, and now do it just for fun!
+          </p>
 
-        <h3 className="mt-8 text-sm uppercase tracking-[0.14em] text-air">
-          Top achievements
-        </h3>
-        <ul className="mt-4 border-t border-ash/10">
-          {achievements.map((achievement) => (
-            <li
-              key={achievement}
-              className="border-b border-ash/10 py-2.5 text-[15px] text-ash"
-            >
-              {achievement}
-            </li>
-          ))}
-        </ul>
+          <h3 className="mt-8 text-sm uppercase tracking-[0.14em] text-air">
+            Top achievements
+          </h3>
+          <ul className="mt-4 border-t border-ash/10">
+            {achievements.map((achievement) => (
+              <li
+                key={achievement}
+                className="border-b border-ash/10 py-2.5 text-[15px] text-ash"
+              >
+                {achievement}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <PhotoGrid photos={dancePhotos} placeholderCount={3} />
@@ -274,17 +274,17 @@ export default async function PersonalPage() {
           first in the markup so mobile and screen readers get it first. */}
       <section className="mt-16 grid items-start gap-10 sm:grid-cols-[1fr_1.15fr] sm:gap-12">
         <div className="sm:order-2">
-        <h2 className="font-display text-2xl text-beige sm:text-3xl">
-          Learning Italian 🇮🇹
-        </h2>
-        <p className="mt-4 max-w-xl leading-relaxed text-ash">
-          When choosing vacation destinations with my Italian partner, I find
-          myself saying &ldquo;Let&rsquo;s go to Italy&rdquo; every single time
-          &mdash; there are too many new places to see! It&rsquo;s time to learn
-          the language so I can live my dream of sounding like a local and
-          expand my vocab outside of &ldquo;ciao&rdquo;, &ldquo;buona
-          sera&rdquo; and &ldquo;spaghetti alle vongole per favore&rdquo; 🤪
-        </p>
+          <h2 className="font-display text-2xl text-beige sm:text-3xl">
+            Learning Italian 🇮🇹
+          </h2>
+          <p className="mt-4 max-w-xl leading-relaxed text-ash">
+            When choosing vacation destinations with my Italian partner, I find
+            myself saying &ldquo;Let&rsquo;s go to Italy&rdquo; every single
+            time &mdash; there are too many new places to see! It&rsquo;s time to
+            learn the language so I can live my dream of sounding like a local
+            and expand my vocab outside of &ldquo;ciao&rdquo;, &ldquo;buona
+            sera&rdquo; and &ldquo;spaghetti alle vongole per favore&rdquo; 🤪
+          </p>
         </div>
 
         <div className="sm:order-1">

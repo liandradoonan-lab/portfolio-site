@@ -50,7 +50,7 @@ export const stagger: Variants = {
   },
 };
 
-/** Spring for hover expansions — experience rows land on this later. */
+/** Spring for expansions — the experience rows and the nav's active pill. */
 export const expandSpring: Transition = {
   type: "spring",
   stiffness: 300,
