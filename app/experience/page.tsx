@@ -1,11 +1,12 @@
 import ExperienceList, { type Section } from "@/components/ExperienceList";
 import Pill from "@/components/Pill";
 
-// Mirrors me/cv.md section for section. The CV summary paragraph is
-// deliberately not here — a headline goes above this list instead.
+// Follows me/cv.md section for section; the wording of everything here —
+// one-liners, company lines, bullets, pills — is edited in the vault's
+// projects/portfolio-copy.md ("Role details") and synced in. The CV summary
+// paragraph is deliberately not here — a headline goes above this list instead.
 //
-// The `line` on each entry is the one thing not lifted verbatim from the CV:
-// it's a one-line statement of what the role was, written from the bullets, so
+// The `line` on each entry is a one-line statement of what the role was, so
 // the collapsed row says something the expanded panel then doesn't repeat.
 const sections: Section[] = [
   {
@@ -18,19 +19,33 @@ const sections: Section[] = [
         sector: "AI-powered meetings and events platform",
         title: "Lead Talent Partner",
         dates: "Sep 2022 – Present",
-        line: "Recruitment & HR Lead for 70-person team — hiring, onboarding, employee relations, office management.",
+        line: "Recruitment & People Ops Lead for 70-person team — hiring, onboarding, employee relations, office management.",
         impact: [
-          "Made roughly 100 hires across every department and seniority — product, engineering, GTM, finance, operations — covering in-office Montreal roles and global hires across LATAM, APAC and EMEA.",
-          "As the sole recruiter for most of that tenure, reported directly to the co-founders as their talent advisor: scoping roles, shaping interview plans, and saying so when a brief and the market didn’t line up.",
-          "Built an AI-powered multi-channel outbound sourcing engine with Heyreach and Claude Code, running campaigns across several concurrent roles.",
+          "As the sole recruiter for most of my tenure, reporting directly to the co-founders, made roughly 100 hires for a 70-person team — every department and seniority, in-office in Montreal and globally across LATAM, APAC and EMEA.",
+          "Trusted advisor to department heads and co-founders: scoping roles, shaping interview plans, recommending offer packages and salary bands from Pave market data, and saying so when a brief and the market didn’t line up.",
+          "Built the recruitment function from the ground up, from the ATS and sourcing tools to an AI-powered multi-channel outbound sourcing engine on HeyReach and Claude Code, running campaigns across several concurrent roles.",
+        ],
+        peopleOps: [
+          "Ran payroll on ADP and global hires through Deel as employer of record, managed group benefits enrolment and renewals with our broker (Canada Life, Manulife), and led the negotiation with Rippling to consolidate onto one all-in-one platform.",
+          "Wrote the employee handbook and core policies — leave, expenses, how to use our tools — and designed the performance process, training managers to run it and give feedback.",
+          "Owned the employee lifecycle: structured onboarding built with team leads (SOC2 checklists, access, equipment), onsite onboarding and immigration support for global hires, and terminations end to end — letters, severance, ROEs and Service Canada.",
+          "Ran the culture calendar — a monthly event program rotated across teams, 5 à 7s, company celebrations, work anniversaries and birthdays.",
+          "Built an HR request tool in Lovable — SSO, document uploads, automated Slack notifications and reminders — to track every employee question and request, then reused it for an onboarding checklist that tracks SOC2 needs and nudges hiring managers on Slack.",
         ],
         tools: [
           "Full-cycle recruiting",
           "Outbound sourcing",
+          "Payroll & benefits",
+          "Policies & performance",
           "Employee relations",
           "Onboarding",
-          "Heyreach",
+          "Compensation",
+          "HeyReach",
           "Claude Code",
+          "ADP",
+          "Deel",
+          "Pave",
+          "Lovable",
         ],
       },
       {
@@ -40,7 +55,7 @@ const sections: Section[] = [
         sector: "Construction materials delivery",
         title: "Recruiter, Operations",
         dates: "Aug 2021 – Aug 2022",
-        line: "High-volume hiring for warehouse and logistics, plus a Culture Ambassador remit.",
+        line: "High-volume hiring for warehouse and logistics + Culture Ambassador",
         impact: [
           "Hired 150 warehouse and logistics teammates across Canadian and US warehouses.",
           "Built recruitment reporting dashboards tracking passthrough rate, no-show rate, rejection reasons and time-to-fill, establishing data-driven hiring practices during rapid scale.",
@@ -82,7 +97,7 @@ const sections: Section[] = [
     ],
   },
   {
-    heading: "Early career",
+    heading: "Early career & part-time",
     roles: [
       {
         id: "costello",
@@ -176,13 +191,18 @@ const education = [
 const toolkit = [
   {
     label: "ATS & CRM",
-    items: ["Gem", "Ashby", "Lever", "Greenhouse", "Hubspot", "Salesforce"],
+    items: ["Gem", "Lever", "Greenhouse", "HubSpot", "Salesforce"],
   },
   {
-    label: "AI & sourcing",
-    items: ["Pin", "Juicebox", "Claude", "Lovable"],
+    label: "AI",
+    items: ["Claude", "Lovable", "ChatGPT", "Codex", "Wispr Flow"],
   },
-  { label: "Also", items: ["Notion", "Heyreach"] },
+  {
+    label: "Sourcing & Outreach",
+    items: ["LinkedIn Recruiter", "Pin", "Juicebox", "Gem", "Fetcher", "HeyReach"],
+  },
+  { label: "Additional", items: ["Notion", "Obsidian"] },
+  { label: "Languages", items: ["English", "French"] },
 ];
 
 export const metadata = { title: "Experience" };
@@ -235,14 +255,6 @@ export default function ExperiencePage() {
               </ul>
             </div>
           ))}
-          <div className="sm:flex sm:gap-4">
-            <span className="block w-32 shrink-0 text-[13px] text-ash/70">
-              Languages
-            </span>
-            <span className="mt-2 block text-[13px] text-ash sm:mt-0">
-              French (professional)
-            </span>
-          </div>
         </div>
       </section>
     </>

@@ -17,8 +17,39 @@ export type Role = {
   /** What the role was. Said here and nowhere else. */
   line: string;
   impact: string[];
+  /** Optional second list, shown under its own "People ops" label. */
+  peopleOps?: string[];
   tools: string[];
 };
+
+function ListLabel({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <p className={`mb-2 text-[11px] uppercase tracking-[0.14em] text-air ${className}`}>
+      {children}
+    </p>
+  );
+}
+
+function Bullets({ points }: { points: string[] }) {
+  return (
+    <ul className="max-w-2xl space-y-2">
+      {points.map((point) => (
+        <li
+          key={point}
+          className="relative pl-4 text-sm leading-relaxed text-ash before:absolute before:left-0 before:text-air before:content-['—']"
+        >
+          {point}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 /**
  * True on devices with a real pointer. Touch screens report `hover: none`, and
@@ -119,16 +150,16 @@ export default function ExperienceRow({
                 </p>
               )}
 
-              <ul className="max-w-2xl space-y-2">
-                {role.impact.map((point) => (
-                  <li
-                    key={point}
-                    className="relative pl-4 text-sm leading-relaxed text-ash before:absolute before:left-0 before:text-air before:content-['—']"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              {/* Two lists get a label each; a single list needs none. */}
+              {role.peopleOps && <ListLabel>Recruitment</ListLabel>}
+              <Bullets points={role.impact} />
+
+              {role.peopleOps && (
+                <>
+                  <ListLabel className="mt-5">People ops</ListLabel>
+                  <Bullets points={role.peopleOps} />
+                </>
+              )}
 
               <ul className="mt-5 flex flex-wrap gap-1.5">
                 {role.tools.map((tool) => (

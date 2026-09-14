@@ -112,11 +112,12 @@ export default async function PersonalPage() {
           <h3 className="mt-8 text-sm uppercase tracking-[0.14em] text-air">
             Top achievements
           </h3>
-          <ul className="mt-4 border-t border-ash/10">
+          {/* No dividers — same dash marker as the /experience bullets. */}
+          <ul className="mt-4 space-y-2">
             {achievements.map((achievement) => (
               <li
                 key={achievement}
-                className="border-b border-ash/10 py-2.5 text-[15px] text-ash"
+                className="relative pl-4 text-[15px] text-ash before:absolute before:left-0 before:text-air before:content-['—']"
               >
                 {achievement}
               </li>
@@ -252,7 +253,8 @@ export default async function PersonalPage() {
         </p>
         <p className="mt-4 max-w-xl leading-relaxed text-ash">
           My go-to genres are sci-fi and fantasy, historical fiction, Greek myth,
-          and any non-fiction about product, tech, startups and talent.
+          and any non-fiction about product, tech, startups and talent, and of
+          course&hellip; dogs.
         </p>
 
         <h3 className="mt-8 text-sm uppercase tracking-[0.14em] text-air">
@@ -278,9 +280,9 @@ export default async function PersonalPage() {
             Learning Italian 🇮🇹
           </h2>
           <p className="mt-4 max-w-xl leading-relaxed text-ash">
-            When choosing vacation destinations with my Italian partner, I find
-            myself saying &ldquo;Let&rsquo;s go to Italy&rdquo; every single
-            time &mdash; there are too many new places to see! It&rsquo;s time to
+            When choosing vacation destinations, I find myself saying
+            &ldquo;let&rsquo;s go to Italy&rdquo; every single time &mdash;
+            there are too many new places to see! It&rsquo;s time to
             learn the language so I can live my dream of sounding like a local
             and expand my vocab outside of &ldquo;ciao&rdquo;, &ldquo;buona
             sera&rdquo; and &ldquo;spaghetti alle vongole per favore&rdquo; 🤪
