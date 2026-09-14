@@ -56,13 +56,14 @@ A centred masthead: the wordmark sits above the pill nav and is itself the link
 home, so there is no "Home" item in the pill. On `/` no pill is active, which is
 correct — home isn't one of the pill's destinations.
 
-On `/` the wordmark is withheld until you scroll, so the page doesn't say
-"Liandra Doonan" directly above "Hi, I'm Liandra!". It is present from the start
-on every other route.
+On `/` there is no wordmark at all — the hero already says the name — and the
+bar doesn't change on scroll. It's a solid `ink` band, invisible against the
+page at the top; as you scroll, content disappears behind it, with a short
+gradient underneath so text fades out instead of being cut off.
 
-The header is transparent over `ink` and gains a blur + hairline border once the
-page scrolls, at which point the wordmark shrinks (36px → 20px) so a masthead this
-size doesn't follow you down the page. The active link is a teal pill with beige
+On every other route the header is transparent over `ink` and gains a blur +
+hairline border once the page scrolls, at which point the wordmark shrinks
+(36px → 20px) so a masthead this size doesn't follow you down the page. The active link is a teal pill with beige
 text, moved between links with a Framer `layoutId` on the shared spring — beige on
 teal is 9.37:1, where the original air-on-teal was 2.52:1.
 

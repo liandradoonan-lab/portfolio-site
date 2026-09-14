@@ -31,26 +31,32 @@ export default function Nav() {
   const pathname = usePathname();
   const scrolled = useScrolled();
   const atHome = pathname === "/";
+  // Home never changes on scroll: no wordmark (the hero already says the
+  // name) and no compact bar — just the pills on a solid black band.
+  const compact = scrolled && !atHome;
 
   return (
     <header
       className={[
         "sticky top-0 z-50 border-b",
         "motion-safe:transition-all motion-safe:duration-300",
-        scrolled
+        compact
           ? "border-ash/10 bg-ink/75 py-2.5 backdrop-blur-xl"
-          : "border-transparent bg-transparent py-8",
+          : atHome
+            ? // Solid ink: invisible against the page at the top, and content
+              // vanishes behind it on scroll. The fade below softens the edge.
+              "border-transparent bg-ink py-8 after:pointer-events-none after:absolute after:inset-x-0 after:top-full after:h-10 after:bg-gradient-to-b after:from-ink after:to-transparent after:content-['']"
+            : "border-transparent bg-transparent py-8",
       ].join(" ")}
     >
       <div className={[
           "mx-auto flex max-w-4xl flex-col items-center px-4 sm:px-6",
           "motion-safe:transition-all motion-safe:duration-300",
-          scrolled ? "gap-2" : "gap-4",
+          compact ? "gap-2" : "gap-4",
         ].join(" ")}>
-        {(!atHome || scrolled) && (
+        {!atHome && (
         <Link
           href="/"
-          aria-current={atHome ? "page" : undefined}
           className={[
             "font-display tracking-tight text-beige transition-colors hover:text-air",
             "motion-safe:transition-all motion-safe:duration-300",
