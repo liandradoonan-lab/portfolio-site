@@ -35,9 +35,9 @@ function LinkedInIcon() {
 }
 
 /**
- * Email and LinkedIn as icon buttons — home hero and the top of /experience.
- * Icon-only, so each link carries a spoken label and a hover tooltip. The
- * footer keeps the address as text, for anyone who wants to copy it.
+ * Email and LinkedIn as icon buttons — home hero and the top of /experience,
+ * the only places contact appears. Icon-only, so each link carries a spoken
+ * label, and a hover tooltip (the email one shows the address itself).
  */
 export default function ContactIcons({ className = "" }: { className?: string }) {
   return (

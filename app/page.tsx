@@ -59,7 +59,7 @@ export default function HomePage() {
             Senior full-stack recruiter, people ops generalist, and crazy dog mom
           </p>
 
-          {/* Contact up front — the footer repeats it on every page. */}
+          {/* Contact up front — the same icons sit beside the /experience heading. */}
           <ContactIcons className="mt-6 justify-center" />
         </div>
 
