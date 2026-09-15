@@ -31,7 +31,7 @@ export default function PageTransition({ children }: { children: ReactNode }) {
     // other so the two halves genuinely cross-fade. Deliberately not
     // mode="wait" — the incoming page mounts immediately, so a stalled exit
     // animation can never leave the site showing nothing.
-    <div className="grid">
+    <div className="grid flex-1">
       <AnimatePresence initial={false}>
         <motion.main
           key={pathname}

@@ -17,7 +17,8 @@ export type Role = {
   /** What the role was. Said here and nowhere else. */
   line: string;
   impact: string[];
-  /** Optional second list, shown under its own "People ops" label. */
+  /** Optional second list. When present, the two lists are labelled
+      "Recruitment" and "People Ops". */
   peopleOps?: string[];
   tools: string[];
 };
@@ -156,7 +157,7 @@ export default function ExperienceRow({
 
               {role.peopleOps && (
                 <>
-                  <ListLabel className="mt-5">People ops</ListLabel>
+                  <ListLabel className="mt-5">People Ops</ListLabel>
                   <Bullets points={role.peopleOps} />
                 </>
               )}

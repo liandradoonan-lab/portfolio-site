@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import HeroPhotoColumn, { type HeroPhoto } from "@/components/HeroPhotoColumn";
+import ContactIcons from "@/components/ContactIcons";
 
 // Two photos either side of the name. Tilts mirror across the name so the
 // hero reads as one composition rather than two separate stacks.
@@ -57,6 +58,9 @@ export default function HomePage() {
           <p className="mx-auto mt-6 max-w-sm text-lg leading-relaxed text-ash">
             Senior full-stack recruiter, people ops generalist, and crazy dog mom
           </p>
+
+          {/* Contact up front — the footer repeats it on every page. */}
+          <ContactIcons className="mt-6 justify-center" />
         </div>
 
         <HeroPhotoColumn photos={rightPhotos} className="order-3 sm:order-none" />

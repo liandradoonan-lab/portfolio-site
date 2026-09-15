@@ -9,7 +9,8 @@ import { expandSpring } from "@/lib/motion";
 // Home is deliberately absent — the wordmark above is the link back.
 const links = [
   { href: "/experience", label: "Experience" },
-  { href: "/recruitment", label: "Recruitment" },
+  // Renamed from "Recruitment"; the URL stays so shared links keep working.
+  { href: "/recruitment", label: "Talent & Culture" },
   { href: "/personal", label: "Personal" },
 ] as const;
 
