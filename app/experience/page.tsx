@@ -1,3 +1,4 @@
+import ContactIcons from "@/components/ContactIcons";
 import ExperienceList, { type Section } from "@/components/ExperienceList";
 import Pill from "@/components/Pill";
 
@@ -21,16 +22,16 @@ const sections: Section[] = [
         dates: "Sep 2022 – Present",
         line: "Recruitment & People Ops Lead for 70-person team — hiring, onboarding, employee relations, office management.",
         impact: [
-          "As the sole recruiter for most of my tenure, reporting directly to the co-founders, made roughly 100 hires for a 70-person team — every department and seniority, in-office in Montreal and globally across LATAM, APAC and EMEA.",
-          "Trusted advisor to department heads and co-founders: scoping roles, shaping interview plans, recommending offer packages and salary bands from Pave market data, and saying so when a brief and the market didn’t line up.",
-          "Built the recruitment function from the ground up, from the ATS and sourcing tools to an AI-powered multi-channel outbound sourcing engine on HeyReach and Claude Code, running campaigns across several concurrent roles.",
+          "As the sole recruiter for most of my tenure, reporting directly to the co-founders, made roughly 100 hires over the last 4 years across all departments and seniorities, in-office in Montreal and globally across LATAM, APAC and EMEA.",
+          "Trusted advisor to department heads and co-founders: scoping roles, shaping interview plans, recommending offer packages and salary bands, and saying so when a brief and the market didn’t line up.",
+          "Built the recruitment function from the ground up, from the ATS and sourcing tools, intake process, interview plans and guidelines, and an AI-powered multi-channel outbound sourcing engine, running campaigns across several concurrent roles.",
         ],
         peopleOps: [
-          "Ran payroll on ADP and global hires through Deel as employer of record, managed group benefits enrolment and renewals with our broker (Canada Life, Manulife), and led the negotiation with Rippling to consolidate onto one all-in-one platform.",
-          "Wrote the employee handbook and core policies — leave, expenses, how to use our tools — and designed the performance process, training managers to run it and give feedback.",
-          "Owned the employee lifecycle: structured onboarding built with team leads (SOC2 checklists, access, equipment), onsite onboarding and immigration support for global hires, and terminations end to end — letters, severance, ROEs and Service Canada.",
-          "Ran the culture calendar — a monthly event program rotated across teams, 5 à 7s, company celebrations, work anniversaries and birthdays.",
-          "Built an HR request tool in Lovable — SSO, document uploads, automated Slack notifications and reminders — to track every employee question and request, then reused it for an onboarding checklist that tracks SOC2 needs and nudges hiring managers on Slack.",
+          "Run payroll on ADP and global hires through Deel (EOR), manage group benefits enrolment and renewals (Canada Life, Manulife), and lead the negotiation with Rippling to consolidate onto one all-in-one platform for global payroll.",
+          "Wrote the employee handbook and core policies — leave, expenses, how to use our tools — and designed a performance process, training managers to run it and give feedback.",
+          "Own the employee lifecycle: structured onboarding built with team leads, onsite onboarding and immigration support for global hires, and terminations end to end.",
+          "Run the culture calendar — monthly team events, 5 à 7s, company celebrations, work anniversaries and birthdays.",
+          "Built multiple AI workflows with Lovable and Claude Code — an HR request tool that tracks every employee question and request, and an employee onboarding checklist that tracks SOC2 needs — with SSO, document uploads, and automated Slack notifications and reminders to task owners.",
         ],
         tools: [
           "Full-cycle recruiting",
@@ -40,12 +41,7 @@ const sections: Section[] = [
           "Employee relations",
           "Onboarding",
           "Compensation",
-          "HeyReach",
-          "Claude Code",
-          "ADP",
-          "Deel",
-          "Pave",
-          "Lovable",
+          "Immigration & relocation assistance",
         ],
       },
       {
@@ -210,7 +206,12 @@ export const metadata = { title: "Experience" };
 export default function ExperiencePage() {
   return (
     <>
-      <h1 className="font-display text-5xl text-beige sm:text-6xl">Experience</h1>
+      {/* Contact sits level with the heading, phones included; it wraps below
+          only on a screen too narrow to fit both. */}
+      <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
+        <h1 className="font-display text-5xl text-beige sm:text-6xl">Experience</h1>
+        <ContactIcons className="sm:mb-2" />
+      </div>
 
       {/* Headline goes here — Liandra is writing a separate one, deliberately
           not the CV summary paragraph. */}

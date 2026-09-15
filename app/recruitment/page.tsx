@@ -1,9 +1,9 @@
-export const metadata = { title: "Recruitment" };
+export const metadata = { title: "Talent & Culture" };
 
 export default function RecruitmentPage() {
   return (
     <>
-      <h1 className="font-display text-5xl text-beige sm:text-6xl">Recruitment</h1>
+      <h1 className="font-display text-5xl text-beige sm:text-6xl">Talent &amp; Culture</h1>
 
       {/* Page intro. Same slot and styling the other section pages will use for
           theirs, so the three read as a set. */}

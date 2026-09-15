@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces } from "next/font/google";
+import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
 import Nav from "@/components/Nav";
 import PageTransition from "@/components/PageTransition";
@@ -52,10 +53,13 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-dvh bg-ink text-beige">
+      {/* Column layout so the footer sits at the bottom of the screen even
+          on a short page — PageTransition takes the spare height. */}
+      <body className="flex min-h-dvh flex-col bg-ink text-beige">
         <MotionProvider>
           <Nav />
           <PageTransition>{children}</PageTransition>
+          <Footer />
         </MotionProvider>
       </body>
     </html>
