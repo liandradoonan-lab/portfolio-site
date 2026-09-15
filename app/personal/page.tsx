@@ -37,8 +37,8 @@ const dogPhotos: Photo[] = [
     alt: "Finn, a grey and white husky mix, sitting still with a treat balanced on his nose",
   },
   {
-    src: "/photos/dogs/oliver-head-treat.jpg",
-    alt: "Oliver, a brown and white Australian Shepherd, looking up at the camera with a treat balanced on his head",
+    src: "/photos/dogs/oliver-and-cat.jpg",
+    alt: "Oliver, a brown and white Australian Shepherd, lying on a bed next to a fluffy black and white cat, against a blue wall",
   },
   {
     src: "/photos/dogs/finn-paw.jpg",
